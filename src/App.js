@@ -1,45 +1,48 @@
 import logo from './logo.svg';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Score from './Score';
+import Navbar from './Navbar';
+
 function App() {
  const[submit,setSubmitbtn]=useState(false);
   const quizData = [
     {
-      question: "What does HTML stand for?",
+      question: "What is the largest rainforest in the world?",
       options: [
-        "Hyper Text Markup Language",
-        "Home Tool Markup Language",
-        "Hyperlinks and Text Markup Language",
-        "Hyper Text Makeup Language"
+        "The Congo Rainforest",
+        "The Amazon Rainforest",
+        "The Daintree Rainforest",
+        "The Valdivian Temperate Rainforest"
       ],
-      answer: "Hyper Text Markup Language"
+      answer: "The Amazon Rainforest"
     },
     {
-      question: "Which HTML tag is used to define an internal style sheet?",
-      options: ["<style>", "<css>", "<script>", "<link>"],
-      answer: "<style>"
+      question: "Which gas is most responsible for trapping heat in the Earth's atmosphere?",
+      options: ["Methane (CH4)", "Nitrous Oxide (N2O)", "Carbon Dioxide (CO2)", "Oxygen (O2)"],
+      answer: "Carbon Dioxide (CO2)"
     },
     {
-      question: "Choose the correct HTML element for the largest heading:",
-      options: ["<h1>", "<heading>", "<h6>", "<head>"],
-      answer: "<h1>"
+      question: "What is the name of the process by which plants convert sunlight into energy?",
+      options: [" Cellular Respiration", "Photosynthesis", "Fermentation", " Transpiration"],
+      answer: "Photosynthesis"
     },
     {
-      question: "Which HTML element is used to define the title of a document?",
-      options: ["<meta>", "<title>", "<head>", "<header>"],
-      answer: "<title>"
+      question: "What percentage of the Earth's surface is covered by oceans?",
+      options: ["50%", " 60%", "71%", "75%"],
+      answer: "71%"
     },
     {
-      question: "What is the correct HTML element for inserting a line break?",
-      options: ["<br>", "<lb>", "<break>", "<newline>"],
-      answer: "<br>"
+      question: "Which country has the highest biodiversity in the world?",
+      options: ["Australia", "Indonesia", "Brazil", " India"],
+      answer: "Brazil"
     }
   ];
     const[index,setIndex]=useState(0);
     const[arrAns,setarrAnswer]=useState(Array(quizData.length).fill(null));
     const[selectedOption,setSelectOption]=useState("");
     const[showscore,setScored]=useState(false);
+    
     function handleAns(option){
       setSelectOption(option);
       let newarr=[...arrAns];
@@ -83,10 +86,10 @@ function App() {
 
 
     <div className='container'>
-     
+      <Navbar/><h1 className="title">NATURE NEXUS QUEST</h1>{Navbar.js}
       {showscore?<h1>Total Score:{totalscore()}/{quizData.length}</h1>:(
         <div>
-            <h1>Q.{index+1})&emsp;{quizData[index].question}</h1>
+            <h1>{index+1})&emsp;{quizData[index].question}</h1>
            <ul type="none"> {quizData[index].options.map((option)=>(
             
               <li >
@@ -100,12 +103,14 @@ function App() {
             
             ))}
             </ul>
-            &emsp;<button className='pre' onClick={prevs}>Prev </button>
-           {index==quizData.length-1?<button className='submit' onClick={()=>setScored(true)}>Submit</button>
-            : <button className='nextbtn' onClick={nextq}>Next 
-            </button>}
-            
-            
+            <div className='button-container'>
+            <button className='pre' onClick={prevs}>Prev </button>
+
+           {index==quizData.length-1?
+           <button className='submit' onClick={()=>setScored(true)}>Submit</button>
+            : 
+            <button className='nextbtn' onClick={nextq}>Next </button>}
+            </div>
             </div>
     )}
     

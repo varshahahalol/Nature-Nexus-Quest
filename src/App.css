@@ -1,45 +1,119 @@
-.App {
-  text-align: center;
-}
-.submit{
-  background-color: red;
-  color:white;
-  margin-left: 100px;
+/* App.css */
+*,*::before *::after{
+  box-sizing: border-box;
 }
 
-.nextbtn{
-  margin-left: 200px;
+.navbar {
+  padding: 10px 20px;
+  position: absolute;
+  justify-content: space-between;
+  top: 10px;
+  right: 10px;
+  border-radius: 5px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+
+.navbar ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
   background-color: #61dafb;
+  color: #282c34;
+  transition: background-color 0.5s ease
 }
-.pre{
-  background-color: antiquewhite;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*quiz*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content:center;
+  min-height: 100vh;
+  background-color: #f0f0f0; /* Optional: Background color for clarity */
+  font-family: Arial, sans-serif; /* Optional: Change font family */
+  padding: 20px; /* Optional: Add padding for spacing */
+}
+
+.container h1 {
+  margin-bottom: 20px; /* Add space below headings */
+}
+
+.container ul {
+  margin-bottom: 20px; /* Add space below options list */
+}
+
+.container button {
+  margin-top: 20px; /* Add space above buttons */
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px; /* Adjust spacing as needed */
+}
+
+/* Styling for submit button */
+.submit {
+  background-color: red;
   color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.submit:hover {
+  background-color: darkred;
 }
 
+/* Styling for next button */
+.nextbtn {
+  background-color: #61dafb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nextbtn:hover {
+  background-color: #21a1f1;
+}
+
+/* Styling for previous button */
+.pre {
+  background-color: antiquewhite;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pre:hover {
+  background-color: #e3dac9;
+}
+
+/* Keyframes for logo spin animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
