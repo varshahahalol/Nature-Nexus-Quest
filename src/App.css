@@ -4,7 +4,7 @@
 }
 
 .navbar {
-  padding: 10px 20px;
+  padding: 10px 20px 20px 20px;
   position: absolute;
   justify-content: space-between;
   top: 10px;
@@ -33,7 +33,7 @@
 }
 
 .navbar ul li a:hover {
-  background-color: #61dafb;
+  background-color: #00ca36;
   color: #282c34;
   transition: background-color 0.5s ease
 }
@@ -45,11 +45,14 @@
   align-items: center;
   justify-content:center;
   min-height: 100vh;
-  background-color: #f0f0f0; /* Optional: Background color for clarity */
-  font-family: Arial, sans-serif; /* Optional: Change font family */
-  padding: 20px; /* Optional: Add padding for spacing */
+  background-color: #f0f0f0; 
+  font-family: Arial, sans-serif; 
+  padding: 50px; /* Optional: Add padding for spacing */
 }
-
+.title{
+  padding: 50px;
+  font-size: 30px;
+}
 .container h1 {
   margin-bottom: 20px; /* Add space below headings */
 }
@@ -85,7 +88,7 @@
 
 /* Styling for next button */
 .nextbtn {
-  background-color: #61dafb;
+  background-color: #00cc1f;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -95,7 +98,7 @@
 }
 
 .nextbtn:hover {
-  background-color: #21a1f1;
+  background-color: #006d21;
 }
 
 /* Styling for previous button */
@@ -113,7 +116,6 @@
   background-color: #e3dac9;
 }
 
-/* Keyframes for logo spin animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -122,3 +124,87 @@
     transform: rotate(360deg);
   }
 }
+
+/*----video-comprehension-----*/
+
+.vid{
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  gap: 20px;
+}
+
+.quiz-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.options-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.options-list li {
+  margin-bottom: 10px;
+}
+
+.options-list label {
+  display: block;
+}
+
+.next-btn {
+  background-color: #00cc1f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: #006d21 0.3s ease;
+}
+.next-btn:hover{
+  background-color: #006d21;
+}
+.prev-btn{
+  background-color: antiquewhite;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover{
+  background-color: #e3dac9;
+}
+
+.submit-btn{
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: darkred;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 800px; 
+  height: auto;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.video-container iframe {
+  width: 100%; 
+  height: 400px; 
+}
+
